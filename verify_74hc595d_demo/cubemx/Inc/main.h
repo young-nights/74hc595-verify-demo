@@ -31,7 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "bsp_sys.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -52,13 +52,18 @@ void MX_USART1_UART_Init(void);
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define _74HC595D_SER_Pin GPIO_PIN_5
+#define _74HC595D_SER_GPIO_Port GPIOA
+#define _74HC595D_SCK_Pin GPIO_PIN_6
+#define _74HC595D_SCK_GPIO_Port GPIOA
+#define _74HC595D_RCK_Pin GPIO_PIN_7
+#define _74HC595D_RCK_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

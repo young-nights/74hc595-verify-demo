@@ -14,7 +14,7 @@
 #define DBG_LVL DBG_LOG
 #include <rtdbg.h>
 
-
+#include "bsp_sys.h"
 
 /**
   * @brief  The application entry point.
@@ -55,7 +55,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+      rt_thread_mdelay(500);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
