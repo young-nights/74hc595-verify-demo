@@ -14,7 +14,9 @@
 
 
 
-
+void _74hc595_init(void);
+void _74hc595_update(void);
+void _74hc595_write(uint8_t led_idx, uint8_t on);
 
 
 
