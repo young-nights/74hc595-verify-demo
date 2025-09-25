@@ -14,10 +14,11 @@
 
 
 
-void _74hc595_init(void);
 void _74hc595_update(void);
-void _74hc595_write(uint8_t led_idx, uint8_t on);
-
+void _74hc595_clear_all(void);
+void _74hc595_set_single(uint8_t led_idx, uint8_t on);
+void _74hc595_set_multi(const uint8_t *idx_list, uint8_t cnt);
+void _74hc595_init(void);
 
 
 #endif /* APPLICATIONS_74HC595D_DRIVER_H_ */

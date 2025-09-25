@@ -47,7 +47,12 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  uint8_t pos = 0;
+  int8_t  step = 1;          // 方向：+1 向右，-1 向左
 
+  _74hc595_init();
+//  _74hc595_set_single(5);             // 只亮第 5 颗
+  _74hc595_update();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -55,7 +60,13 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-      rt_thread_mdelay(500);
+      _74hc595_clear_all();          // 全部熄灭
+      _74hc595_set_single(pos, 1);   // 只点亮当前一颗
+      rt_thread_mdelay(150);
+
+      pos += step;
+      if (pos >= 20) { step = -1; pos = 20; }   // 到最右折返
+      if (pos == 0)  { step = +1; }             // 到最左折返
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
