@@ -1,4 +1,4 @@
-```C
+```bash
 create_at：2025/11/13
 aliases：验证74hc595驱动LED灯函数
 hardware：STM32F103RCT6最小系统板
