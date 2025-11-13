@@ -1,3 +1,9 @@
+
+create_at：2025/11/13
+aliases：验证74hc595驱动LED灯函数
+hardware：STM32F103RET6最小系统板
+software：RT-Thread
+
 # <font size=3>一、工程介绍</font>
 <font size=2>
 
@@ -71,10 +77,11 @@
 | 12   | RCK    | 锁存寄存器时钟， 高电平存储                               |
 | 14   | SER    | 串行数据输入端                                           |
 
-
+<br>
 ![原理图](./images/74hc595_pic1.png)
 
 实物图如下：
+<br>
 ![实物图](./images/led_board_pic1.png)
 
 </font>
